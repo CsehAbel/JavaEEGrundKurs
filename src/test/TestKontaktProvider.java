@@ -1,5 +1,6 @@
 package test;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +13,7 @@ import cdi.KontaktProvider;
 @Dependent 
 @Test
 @Alternative
-public class TestKontaktProvider extends KontaktProvider{
+public class TestKontaktProvider extends KontaktProvider implements Serializable{
 
 	private List<String> namen=new ArrayList<>();
 	

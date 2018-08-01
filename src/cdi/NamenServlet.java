@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class NamenServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
+	@Inject
 	private KontaktManager kontaktManager;
        
     /**
@@ -26,7 +27,6 @@ public class NamenServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
     
-    @Inject
     private void setManager(KontaktManager manager){
     	kontaktManager=manager;
     }
@@ -35,7 +35,11 @@ public class NamenServlet extends HttpServlet {
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().write("<h1>el!</h1>");
+		response.getWriter().write("<ol>");
+		for(String s:kontaktManager.getKontaktNamen()){
+			response.getWriter().write("<li>"+s+"</li>");
+		}
+		response.getWriter().write("</ol>");
 	}
 
 }
