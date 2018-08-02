@@ -9,6 +9,7 @@ import javax.enterprise.context.Dependent;
 import javax.enterprise.inject.Alternative;
 
 import cdi.KontaktProvider;
+import interceptors.Logging;
 
 @Dependent 
 @Test
