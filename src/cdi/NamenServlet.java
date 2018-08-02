@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import decorators.KontaktHandler;
+
 /**
  * Servlet implementation class NamenServlet
  */
@@ -17,7 +19,7 @@ public class NamenServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
-	private KontaktManager kontaktManager;
+	private KontaktHandler kontaktManager;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -27,7 +29,7 @@ public class NamenServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
     
-    private void setManager(KontaktManager manager){
+    private void setManager(KontaktHandler manager){
     	kontaktManager=manager;
     }
 
