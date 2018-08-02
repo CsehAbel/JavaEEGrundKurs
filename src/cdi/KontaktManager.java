@@ -15,10 +15,9 @@ import test.Test;
 public class KontaktManager implements KontaktHandler{
 
 	//Alternative-ok nincsenek felvéve
-	//a beans.xml-be, de KontaktProviderFactory-ban instance-oljuk
-	//@Test Qualifier-es @Producer-es metódussal
+	//a beans.xml-be
 	//a  TestKontaktProvider-t
-	@Inject @Test @SessionScoped
+	@Inject @Test
 	private KontaktProvider kontaktProvider;
 	
 	/* (non-Javadoc)
